@@ -1,0 +1,3 @@
+sap.ui.define(["sap/ui/core/UIComponent","sap/ui/Device","com/publicstorage/prop/zpropattributes/model/models"],function(e,t,i){"use strict";return e.extend("com.publicstorage.prop.zpropattributes.Component",{metadata:{manifest:"json"},init:function(){e.+
+prototype.init.apply(this,arguments);this.getRouter().initialize();const t=this.getModel("mainModel");sap.ui.getCore().setModel(t,"mainModel");this.setModel(i.createDeviceModel(),"device")}})});                                                             
+//# sourceMappingURL=Component.js.map                                                                                                                                                                                                                          

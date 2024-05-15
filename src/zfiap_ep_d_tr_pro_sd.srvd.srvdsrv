@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for ZFIAP_EP_D_TR_PRO'
+define service ZFIAP_EP_D_TR_PRO_SD {
+  expose ZFIAP_EP_D_TR_PRO;
+}

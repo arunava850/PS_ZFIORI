@@ -1,0 +1,49 @@
+@Metadata.layer: #CORE
+annotate entity ZPROPERTY_ADD_ON_CDS with
+{
+
+  @UI.facet: [ { id:              'State',
+                   purpose:         #STANDARD,
+                   type:            #IDENTIFICATION_REFERENCE,
+                   label:           'Detail',
+                   position:        10 } ]
+                   
+                   
+  @EndUserText.label: 'Plant'@UI: {  lineItem:       [ { position: 10 } ],         identification: [ { position: 10 } ],         selectionField: [ { position: 10 } ],
+  dataPoint: { title: 'Plant', targetValueElement: 'Plant' }}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'I_Plant',
+     element: 'Plant' }
+  }]
+  Plant;
+  @EndUserText.label: 'Legacy Property Number'@UI: {  lineItem:       [ { position: 20 } ],         identification: [ { position: 20 } ],         selectionField: [ { position: 20 } ]  ,
+  dataPoint: { title: 'Property', targetValueElement: 'Property' }}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'Zproperty_cds',
+         element: 'LegacyPropertyNumber' }
+  }]
+  Property;
+  @EndUserText.label: 'Key'@UI: {  lineItem:       [ { position: 30 } ],         identification: [ { position: 30 } ],         selectionField: [ { position: 30 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'ZFI_VH_ZPROPERTY_ADD_KEY',
+         element: 'KeyId' }
+  }]
+  KeyId;
+  @EndUserText.label: 'Code'@UI: {  lineItem:       [ { cssDefault : {width: '5rem'}, position: 40 } ],         identification: [ { position: 40 } ],         selectionField: [ { position: 40 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'ZFI_VH_ZPROPERTY_ADD_CODE',
+         element: 'Code' }
+  }]
+  Code;
+  @EndUserText.label: 'Value1'@UI: {  lineItem:       [ { cssDefault : {width: '5rem'}, position: 50 } ],         identification: [ { position: 50 } ]}
+  Value1;
+  @EndUserText.label: 'Value2'@UI: {  lineItem:       [ { cssDefault : {width: '5rem'}, position: 60 } ],         identification: [ { position: 60 } ]}
+  Value2;
+  @EndUserText.label: 'Description1'@UI: {  lineItem:       [ { cssDefault : {width: '15rem'}, position: 70 } ],         identification: [ { position: 70 } ]}
+  Description1;
+  @EndUserText.label: 'Description2'@UI: {  lineItem:       [ { cssDefault : {width: '15rem'}, position: 80 } ],         identification: [ { position: 80 } ]}
+  Description2;
+  @EndUserText.label: 'Changed By'@UI: {  lineItem:       [ { position: 90 } ],         identification: [ { position: 90 } ]}
+  ChangedBy;
+  @EndUserText.label: 'Change Date'@UI: {  lineItem:       [ { position: 100 } ],         identification: [ { position: 100 } ]}
+  ChangedDate;
+  @EndUserText.label: 'Time'@UI: {  lineItem:       [ { position: 110 } ],         identification: [ { position: 110 } ]}
+  ChangedTime;
+
+}

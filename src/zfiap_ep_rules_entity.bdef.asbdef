@@ -1,0 +1,38 @@
+unmanaged implementation in class zbp_fiap_ep_rules_entity unique;
+strict ;
+
+define behavior for ZFIAP_EP_RULES_ENTITY alias Rules //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{ field ( mandatory : create, readonly : update ) State;
+  field ( readonly ) Changed_By;
+  field ( readonly ) Changed_On;
+  field ( readonly ) Changed_At;
+  field ( readonly ) Created_At;
+  field ( readonly ) Created_By;
+  field ( readonly ) Created_On;
+
+  create;
+  update;
+  delete;
+
+  mapping for ZFIAP_EP_RULES
+  {
+    State = state;
+    Escheat_Rule = escheat_rule;
+    Remit_Type = remit_type;
+    Holding_Period = holding_period;
+    HP_UOM = hp_uom;
+    PI_Delay = pi_delay;
+    Prop_Type_Code = prop_type_code;
+    Created_By = created_by;
+    Created_On = created_on;
+    Created_At = created_at;
+    Changed_By = changed_by;
+    Changed_On = changed_on;
+    Changed_At = changed_at;
+
+  }
+}

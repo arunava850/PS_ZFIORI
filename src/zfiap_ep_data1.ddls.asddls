@@ -1,0 +1,52 @@
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'EP Data'
+@Metadata.allowExtensions: true
+define root view entity ZFIAP_EP_DATA1 as select from zfiap_ep_data
+
+{
+    
+   key edi_trans_no as EdiTransNo,
+   attachment as Attachment,
+   edi_trans_date as EdiTransDate,
+   request_type as RequestType,
+   approval_status as ApprovalStatus,
+   tenant_number as TenantNumber,
+   tenant_name as TenantName,
+   payee_number as PayeeNumber,
+   payee_name as PayeeName,
+   sales_date as SalesDate,
+   gl_account as GlAccount,
+   amount as Amount,
+   waers as Waers,
+   exp_remark as ExpRemark,
+   invoice_number as InvoiceNumber,
+   business_unit_company_code as BusinessUnitCompanyCode,
+   business_unit as BusinessUnit,
+   business_unit_state as BusinessUnitState,
+   business_unit_country as BusinessUnitCountry,
+   tenant_state as TenantState,
+   posting_date as PostingDate,
+   company_code as CompanyCode,
+   document_type as DocumentType,
+   document_number as DocumentNumber,
+   comment_ as Comment_,
+   district as District,
+   senior_district as SeniorDistrict,
+   region as Region,
+   senior_region as SeniorRegion,
+   division as Division,
+   zzone as Zzone,
+   escheat_rule as EscheatRule,
+   remit_type as RemitType,
+   holding_period as HoldingPeriod,
+   hp_uom as HpUom,
+   pi_delay_period as PiDelayPeriod,
+   hp_expire_date as HpExpireDate,
+   tracker_sent_date as TrackerSentDate,
+   created_by as CreatedBy,
+   create_date as CreateDate,
+   create_time as CreateTime,
+   changed_by as ChangedBy,
+   changed_date as ChangedDate,
+   changed_time as ChangedTime 
+}

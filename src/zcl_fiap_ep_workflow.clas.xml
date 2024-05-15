@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_FIAP_EP_WORKFLOW</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>EP Workflow Class</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_APPROVER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get Approver</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_OBJECT_ID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>EP Data Workflow Key</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>POST</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Post Invoice</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>UPDATE_EP_DATA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Update EP Data</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CANCEL_WORKFLOW</CMPNAME>
+     <SCONAME>IS_DATA</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>EP Data Workflow Key</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IV_OBJECT_ID</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>EP Data Workflow Key</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATED</CMPNAME>
+     <SCONAME>IS_DATA</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>EP Data Workflow Key</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>RESTART_WORKFLOW</CMPNAME>
+     <SCONAME>IS_DATA</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>EP Data Workflow Key</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+   <ATTRIBUTES>
+    <item>
+     <CMPNAME>MV_OBJECT_ID</CMPNAME>
+     <ATTKEYFLD>X</ATTKEYFLD>
+     <EXPOSURE>2</EXPOSURE>
+    </item>
+   </ATTRIBUTES>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,197 @@
+managed implementation in class zbp_fiap_ep_data2 unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZFIAP_EP_DATA2 alias details    ##DRAFT_OP_NOT_REQUIRED
+//persistent table ZFIAP_EP_PERS
+draft table zfiap_ep_data_dr
+with unmanaged save
+lock master
+total etag Changed_Time
+authorization master ( instance )
+//etag master <field_name>
+{
+
+field ( readonly ) edi_trans_no;
+//field ( readonly ) attachment;
+field ( readonly ) edi_trans_date;
+
+field ( readonly ) tenant_number;
+field ( readonly ) tenant_name;
+
+field ( readonly ) sales_date;
+field ( readonly ) gl_account;
+field ( readonly ) amount;
+field ( readonly ) waers;
+field ( readonly ) exp_remark;
+field ( readonly ) invoice_number;
+field ( readonly ) business_unit_company_code;
+field ( readonly ) business_unit;
+field ( readonly ) business_unit_state;
+field ( readonly ) business_unit_country;
+field ( readonly ) tenant_state;
+field ( readonly ) posting_date;
+field ( readonly ) company_code;
+field ( readonly ) document_type;
+field ( readonly ) document_number;
+field ( readonly ) comment_;
+field ( readonly ) district;
+field ( readonly ) senior_district;
+field ( readonly ) region;
+field ( readonly ) senior_region;
+field ( readonly ) division;
+field ( readonly ) zzone;
+field ( readonly ) escheat_rule;
+field ( readonly ) remit_type;
+field ( readonly ) holding_period;
+field ( readonly ) hp_uom;
+field ( readonly ) pi_delay_period;
+field ( readonly ) hp_expire_date;
+
+field ( readonly ) created_by;
+field ( readonly ) create_date;
+field ( readonly ) create_time;
+field ( readonly ) changed_by;
+field ( readonly ) changed_date;
+field ( readonly ) changed_time;
+
+field ( readonly ) request_type;
+field ( readonly ) approval_status;
+field ( readonly ) payee_number;
+field ( readonly ) payee_name;
+field ( readonly ) tracker_sent_date;
+
+field ( readonly ) EpWfId;
+
+//field ( readonly ) mimetype;
+//field ( readonly ) attfile;
+
+  //create;
+  update;
+  //delete;
+
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+
+  draft determine action Prepare;
+
+  action validate parameter ZFIAP_EP_DATA_CON result [1] $self;
+  action post parameter ZFIAP_EP_DATA_CON result [1] $self;
+  // action ( features : instance ) attach result [1] $self;
+  action upd parameter ZFIAP_EP_DATA_upd result [1] $self;
+  static action extract parameter ZFIAP_EP_DATA_upd; /// result ;"[1] $self;
+}
+
+//*****************
+
+//projection;
+//strict ( 2 );
+//use draft;
+//
+//define behavior for ZFIAP_EP_DATA2_Proj //alias <alias_name>
+//{
+//  use update;
+//
+//  field ( readonly ) request_type;
+//  field ( readonly ) approval_status;
+//  field ( readonly ) payee_number;
+//  field ( readonly ) payee_name;
+//  field ( readonly ) tracker_sent_date;
+//
+//  use action validate;
+//  use action post;
+//  use action upd;
+//
+//  use action Edit;
+//  use action Activate;
+//  use action Discard;
+//  use action Resume;
+//  use action Prepare;
+//}
+
+
+//  mapping for ZFIAP_EP_DATA2 control ZFIAP_X_EP_PERS corresponding
+//  {
+//
+//    //    edi_trans_no = edi_trans_no;
+//    attachment = attachment;
+//    edi_trans_date = edi_trans_date;
+//    request_type = request_type;
+//    approval_status = approval_status;
+//    tenant_number = tenant_number;
+//    tenant_name = tenant_name;
+//    payee_number = payee_number;
+//    payee_name = payee_name;
+//    sales_date = sales_date;
+//    gl_account = gl_account;
+//    //@Semantics.amount.currencyCode = @Semantics.amount.currencyCode;
+//    amount = amount;
+//    waers = waers;
+//    exp_remark = exp_remark;
+//    invoice_number = invoice_number;
+//    business_unit_company_code = business_unit_company_code;
+//    business_unit = business_unit;
+//    business_unit_state = business_unit_state;
+//    business_unit_country = business_unit_country;
+//    tenant_state = tenant_state;
+//    posting_date = posting_date;
+//    company_code = company_code;
+//    document_type = document_type;
+//    document_number = document_number;
+//    comment_ = comment_;
+//    district = district;
+//    senior_district = senior_district;
+//    region = region;
+//    senior_region = senior_region;
+//    division = division;
+//    zzone = zzone;
+//    escheat_rule = escheat_rule;
+//    remit_type = remit_type;
+//    holding_period = holding_period;
+//    hp_uom = hp_uom;
+//    pi_delay_period = pi_delay_period;
+//    hp_expire_date = hp_expire_date;
+//    tracker_sent_date = tracker_sent_date;
+//    created_by = created_by;
+//    create_date = create_date;
+//    create_time = create_time;
+//    changed_by = changed_by;
+//    changed_date = changed_date;
+//    changed_time = changed_time;
+//    //att_id = att_id;
+//    mimetype = mimetype;
+//    attfile = attfile;
+//
+////  }
+//
+//}
+
+
+//unmanaged implementation in class zbp_fiap_ep_data2 unique;
+//strict ( 2 );
+//
+//define behavior for ZFIAP_EP_DATA2 alias details
+//late numbering
+//lock master
+//authorization master ( instance )
+//etag master CreateDate
+//{
+//   field ( mandatory : create, readonly : update ) EdiTransNo;
+//  field ( readonly ) ChangedBy;
+//  field ( readonly ) ChangedDate;
+//  field ( readonly ) ChangedTime;
+//  field ( readonly ) CreatedBy;
+//  field ( readonly ) CreateTime;
+//  field ( readonly ) CreateDate;
+//
+//  create;
+//  update ( features : instance );
+//  delete;
+//  action ( features : instance ) validate result [1] $self;
+//  action ( features : instance ) post result [1] $self;
+// // action ( features : instance ) attach result [1] $self;
+//  action attach parameter ZFIAP_EP_DATA_ATTACH result [1] $self;
+//
+//}

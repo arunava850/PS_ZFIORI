@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZEP_DT</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZEP_DT</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp; &amp; &amp; &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZEP_DT</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Conifrmation is Required</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZEP_DT</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>&amp; : Escheat Rule is not &quot;Immediate&quot;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZEP_DT</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>&amp; : Date is not current</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZEP_DT</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>&amp; : Succesfully Validated</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZEP_DT</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>No Valid Data to validate</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZEP_DT</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Payee updates if Request type is Immediate Pay or Remit to Jurisdiction</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZEP_DT</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>No Valid Data to Update</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZEP_DT</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Please attach the document for EDI Transaction : &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZEP_DT</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>No Valid Input data to Update</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZEP_DT</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>&amp; : Succesfully Updated</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZEP_DT</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Data Cannot be created</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZEP_DT</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>To Remit to Jurisdiction - Please Confirm Payee Number!!</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

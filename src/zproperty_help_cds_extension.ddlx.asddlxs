@@ -1,0 +1,30 @@
+@Metadata.layer: #CORE
+annotate entity ZPROPERTY_HELP_CDS with
+{
+
+  @UI.facet: [ { id:              'State',
+                   purpose:         #STANDARD,
+                   type:            #IDENTIFICATION_REFERENCE,
+                   label:           'Detail',
+                   position:        10 } ]
+                   
+  @EndUserText.label: 'Key Field'@UI: {  lineItem:       [ { cssDefault : {width: '20rem'}, position: 10 } ],         identification: [ { position: 10 } ],         selectionField: [ { position: 10 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'ZFI_VH_ZPROPERTY_HELP',
+         element: 'Keyfield' }
+  }]
+  Keyfield;
+  @EndUserText.label: 'Code'@UI: {  lineItem:       [ { position: 20 } ],         identification: [ { position: 20 } ],         selectionField: [ { position: 20 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'ZFI_VH_ZPROPERTY_CODE',
+         element: 'Code' }
+  }]
+  Code;
+  @EndUserText.label: 'Description'@UI: {  lineItem:       [ { position: 30 } ],         identification: [ { position: 30 } ]}
+  Description;
+  @EndUserText.label: 'Changed By'@UI: {  lineItem:       [ { position: 50 } ],         identification: [ { position: 50 } ]}
+  ChangedBy;
+  @EndUserText.label: 'Change Date'@UI: {  lineItem:       [ { position: 60 } ],         identification: [ { position: 60 } ]}
+  ChangedDate;
+  @EndUserText.label: 'Time'@UI: {  lineItem:       [ { position: 70 } ],         identification: [ { position: 70 } ]}
+  ChangedTime;
+
+}

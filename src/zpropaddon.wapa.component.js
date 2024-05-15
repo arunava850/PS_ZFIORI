@@ -1,0 +1,2 @@
+sap.ui.define(["sap/suite/ui/generic/template/lib/AppComponent"],function(e){"use strict";return e.extend("sap.com.ps.zpropaddonm.Component",{metadata:{manifest:"json"}})});                                                                                  
+//# sourceMappingURL=Component.js.map                                                                                                                                                                                                                          

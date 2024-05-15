@@ -1,0 +1,135 @@
+@Metadata.layer: #CORE
+annotate entity ZFIAP_EP_DATA1 with
+{
+  @UI.facet: [ { id:              'Data',
+                  purpose:         #STANDARD,
+                  type:            #IDENTIFICATION_REFERENCE,
+                  label:           'Detail',
+                  position:        10 } ]
+  @EndUserText.label: 'Edi Trans Number'
+  @UI: {  lineItem:       [ { position: 10 } ],
+        identification: [ { position: 10 } ]
+        }
+  EdiTransNo;
+  @EndUserText.label: 'Attachment'
+  @UI: {  lineItem:       [ { position: 20,
+                              importance: #HIGH } ,
+                            { type: #FOR_ACTION,
+                              dataAction: 'validate',
+                              label: 'Validate',
+                              invocationGrouping: #CHANGE_SET,
+                              position: 10 },
+                            { type: #FOR_ACTION,
+                              dataAction: 'post',
+                              label: 'Post',
+                              invocationGrouping: #CHANGE_SET,
+                              position: 20 },
+                            { type: #FOR_ACTION,
+                              dataAction: 'attach',
+                              label: 'Attach',
+                              invocationGrouping: #CHANGE_SET,
+                              position: 30 }],
+        identification: [ { position: 20 } ]
+        }
+  Attachment;
+  @EndUserText.label: 'Edi Trans Date'
+  @UI: {  lineItem:       [ { position: 30 } ],
+        identification: [ { position: 30 } ] }
+  EdiTransDate;
+  @EndUserText.label: 'Request Type'
+  @UI: {  lineItem:       [ { position: 40 } ],
+        identification: [ { position: 40 } ],
+        selectionField: [ { position: 10 } ] }
+  RequestType;
+  @EndUserText.label: 'Approval Status'
+  @UI: {  lineItem:       [ { position: 50 } ],
+        identification: [ { position: 50 } ],
+        selectionField: [ { position: 20 } ] }
+  ApprovalStatus;
+  // @UI.identification: [{ position: 60 }]
+  @UI: {  lineItem:       [ { position: 60 } ],
+      identification: [ { position: 60 } ],
+      selectionField: [ { position: 30 } ] }
+  TenantNumber;
+  @UI.identification: [{ position: 70 }]
+  TenantName;
+  @UI: {  lineItem:       [ { position: 80 } ],
+        identification: [ { position: 80 } ],
+        selectionField: [ { position: 40 } ] }
+  PayeeNumber;
+  @UI.identification: [{ position: 90 }]
+  PayeeName;
+  @UI.identification: [{ position: 100 }]
+  SalesDate;
+  @UI.identification: [{ position: 130 }]
+  Waers;
+  @UI.identification: [{ position: 140 }]
+  ExpRemark;
+  @UI: {  lineItem:       [ { position: 150 } ],
+        identification: [ { position: 150 } ],
+        selectionField: [ { position: 40 } ] }
+  InvoiceNumber;
+  @UI.identification: [{ position: 160 }]
+  BusinessUnitCompanyCode;
+  @UI: {  lineItem:       [ { position: 170 } ],
+        identification: [ { position: 170 } ],
+        selectionField: [ { position: 50 } ] }
+  BusinessUnit;
+  @UI.identification: [{ position: 180 }]
+  BusinessUnitState;
+  @UI.identification: [{ position: 190 }]
+  BusinessUnitCountry;
+  @UI.identification: [{ position: 220 }]
+  TenantState;
+  @UI.identification: [{ position: 230 }]
+  PostingDate;
+  @UI.identification: [{ position: 240 }]
+  CompanyCode;
+  @UI.identification: [{ position: 250 }]
+  DocumentType;
+  @UI.identification: [{ position: 260 }]
+  DocumentNumber;
+  @UI.identification: [{ position: 270 }]
+  Comment_;
+  @UI.identification: [{ position: 280 }]
+  District;
+  @UI.identification: [{ position: 290 }]
+  SeniorDistrict;
+  @UI.identification: [{ position: 300 }]
+  Region;
+  @UI.identification: [{ position: 310 }]
+  SeniorRegion;
+  @UI.identification: [{ position: 320 }]
+  Division;
+  @UI.identification: [{ position: 330 }]
+  Zzone;
+  @UI.identification: [{ position: 340 }]
+  EscheatRule;
+  @UI: {  lineItem:       [ { position: 350 } ],
+        identification: [ { position: 350 } ],
+        selectionField: [ { position: 60 } ] }
+  RemitType;
+  @UI.identification: [{ position: 360 }]
+  HoldingPeriod;
+  @UI.identification: [{ position: 370 }]
+  HpUom;
+  @UI.identification: [{ position: 380 }]
+  PiDelayPeriod;
+  @UI.identification: [{ position: 390 }]
+  HpExpireDate;
+  @UI.identification: [{ position: 400 }]
+  TrackerSentDate;
+  @UI.identification: [{ position: 410 }]
+  CreatedBy;
+  @UI.identification: [{ position: 420 }]
+  CreateDate;
+  @UI.identification: [{ position: 430 }]
+  CreateTime;
+  @UI.identification: [{ position: 440 }]
+  ChangedBy;
+  @UI.identification: [{ position: 450 }]
+  ChangedDate;
+  @UI.identification: [{ position: 460 }]
+  ChangedTime;
+
+}

@@ -1,0 +1,270 @@
+@Metadata.layer: #CORE
+annotate entity ZFIAP_EP_D_TR_PRO with
+{
+  @UI.facet: [    {
+                label: 'General Information',
+                id: 'GeneralInfo',
+                type: #COLLECTION,
+                position: 10
+                },
+                     { id:            'Detail',
+                    purpose:       #STANDARD,
+                    type:          #IDENTIFICATION_REFERENCE,
+                    label:         'Invoice Details',
+                    parentId: 'GeneralInfo',
+                    position:      10 },
+                  {
+                      id: 'Upload',
+                      purpose: #STANDARD,
+                      type: #FIELDGROUP_REFERENCE,
+                      parentId: 'GeneralInfo',
+                      label: 'Upload',
+                      position: 20,
+                      targetQualifier: 'Upload'
+                  } ]
+  @EndUserText.label: 'Document Number'
+  @UI: {  lineItem:       [ { position: 20 },
+  { type: #FOR_ACTION,
+                            dataAction: 'track_upd',
+                            label: 'Update Track Pro',
+                            invocationGrouping: #CHANGE_SET,
+                            position: 10 }],
+        identification: [ { position: 10 } ]
+        }
+  edi_trans_no;
+  @UI: {  lineItem:       [ { position: 10 } ],
+        identification: [ { position: 170 } ] }
+  @EndUserText.label: 'Business Unit'
+  business_unit;
+  @UI: {  lineItem:       [ { position: 30 } ],
+    identification: [ { position: 80 } ] }
+  @EndUserText.label: 'Vendor Number'
+  payee_number;
+  @UI: {  lineItem:       [ { position: 40 } ],
+  identification: [ { position: 80 } ] }
+  @EndUserText.label: 'Check Number'
+  checknumber;
+  @UI: {
+  //  lineItem:       [ { position: 350 } ],
+        identification: [ { position: 180 } ],
+        selectionField: [ { position: 10 } ] }
+  business_unit_state;
+  @UI: {  lineItem:       [ { position: 50 } ],
+      identification: [ { position: 80 } ] }
+  @EndUserText.label: 'Property Type Code'
+  prop_type_code;
+
+  @UI: {  lineItem:       [ { position: 55 } ],
+    identification: [ { position: 80 } ] }
+  @EndUserText.label: 'Property Description'
+  invoice_number;
+  @UI: {  lineItem:       [ { position: 60 } ],
+    identification: [ { position: 80 } ] }
+  @EndUserText.label: 'Owner Last Name'
+  Name2;
+
+  @UI: {  lineItem:       [ { position: 70 } ],
+    identification: [ { position: 80 } ] }
+  @EndUserText.label: 'Owner First Name'
+  Name1;
+
+  @UI: {  lineItem:       [ { position: 80 } ],
+    identification: [ { position: 80 } ] }
+  @EndUserText.label: 'Owner Middle Name'
+  middle_name;
+
+  @UI: {  lineItem:       [ { position: 90 } ],
+  identification: [ { position: 80 } ] }
+  @EndUserText.label: 'Title'
+  Title;
+
+  @UI: {  lineItem:       [ { position: 100 } ],
+  identification: [ { position: 80 } ] }
+  @EndUserText.label: 'Suffix'
+  Name3;
+
+  @UI: {  lineItem:       [ { position: 110 } ],
+  identification: [ { position: 80 } ] }
+  @EndUserText.label: 'Mailing Address'
+  Stras;
+
+  @UI: {  lineItem:       [ { position: 120 } ],
+  identification: [ { position: 80 } ] }
+  @EndUserText.label: 'Mailing Address 2'
+  StrSuppl1;
+
+  @UI: {  lineItem:       [ { position: 130 } ],
+  identification: [ { position: 80 } ] }
+  @EndUserText.label: 'City'
+  Ort01;
+
+  @UI: {  lineItem:       [ { position: 140 } ],
+  identification: [ { position: 80 } ] }
+  @EndUserText.label: 'State'
+  Regio;
+
+  @UI: {  lineItem:       [ { position: 150 } ],
+  identification: [ { position: 80 } ] }
+  @EndUserText.label: 'Zip Code'
+  Pstlz;
+
+  @UI: {  lineItem:       [ { position: 160 } ],
+  identification: [ { position: 80 } ] }
+  @EndUserText.label: 'Country'
+  Country;
+
+  @UI: {  lineItem:       [ { position: 170 } ],
+  identification: [ { position: 80 } ] }
+  @EndUserText.label: 'Check Date'
+  sales_date;
+
+  @UI: {  lineItem:       [ { position: 180 } ],
+  identification: [ { position: 80 } ] }
+  @EndUserText.label: 'Owner SSN'
+  taxno;
+
+  @UI: {  lineItem:       [ { position: 190 } ],
+  identification: [ { position: 80 } ] }
+  @EndUserText.label: 'Check Amount'
+  AmountStr;
+
+  @UI: {
+  //  lineItem:       [ { position: 350 } ],
+      identification: [ { position: 350 } ],
+      selectionField: [ { position: 20 } ] }
+  hp_expire_date;
+  //  //  @EndUserText.label: 'Attachment'
+  //  //  @UI: {  lineItem:       [ { position: 30 } ],
+  //  //        identification: [ { position: 30 } ] }
+  //  //  attachment;
+  //  @EndUserText.label: 'Edi Trans Date'
+  //
+  //  @UI: {  lineItem:       [ { position: 20,
+  //                            importance: #HIGH } ,
+  //                          { type: #FOR_ACTION,
+  //                            dataAction: 'validate',
+  //                            label: 'Validate',
+  //                            invocationGrouping: #CHANGE_SET,
+  //                            position: 10 },
+  ////                            { type: #FOR_ACTION,
+  ////                              dataAction: 'post',
+  ////                              label: 'Post',
+  ////                              invocationGrouping: #CHANGE_SET,
+  ////                              position: 20 },
+  //                          { type: #FOR_ACTION,
+  //                            dataAction: 'upd',
+  //                            label: 'Update',
+  //                            invocationGrouping: #CHANGE_SET,
+  //                            position: 30 }
+  ////                            ,
+  ////                          { type: #FOR_ACTION,
+  ////                            dataAction: 'extract',
+  ////                            label: 'Extract',
+  ////                            invocationGrouping: #CHANGE_SET,
+  ////                            position: 40 }
+  //                            ],
+  //
+  //      identification: [ { position: 20 } ]
+  //      }
+  //  edi_trans_date;
+  //  @EndUserText.label: 'Request Type'
+  //  @UI: {   lineItem:       [ { position: 40 } ],
+  //        identification: [ { position: 40 } ],
+  //        selectionField: [ { position: 10 } ] }
+  //  request_type;
+  //  @EndUserText.label: 'Attachment'
+  //  @UI: { lineItem:       [ { position: 25 } ],
+  //         fieldGroup:     [ { position: 25, qualifier: 'Upload' , label: 'Attachment'} ]}
+  //  ATTFILE;
+  //  @UI.hidden: true
+  //  MIMETYPE;
+  //  @EndUserText.label: 'Approval Status'
+  //  @UI: {  lineItem:       [ { position: 50 } ],
+  //        identification: [ { position: 50 } ],
+  //        selectionField: [ { position: 20 } ] }
+  //  approval_status;
+  //  // @UI.identification: [{ position: 60 }]
+  //  @UI: {  lineItem:       [ { position: 60 } ],
+  //      identification: [ { position: 60 } ],
+  //      selectionField: [ { position: 30 } ] }
+  //  tenant_number;
+  //  @UI.identification: [{ position: 70 }]
+  //  tenant_name;
+  //  @UI.identification: [{ position: 90 }]
+  //  payee_name;
+  //  @UI.identification: [{ position: 100 }]
+  //  sales_date;
+  //  @UI.identification: [{ position: 110 }]
+  //  gl_account;
+  //  @UI.identification: [{ position: 120 }]
+  //  Amount;
+  //  @UI.identification: [{ position: 130 }]
+  //  Waers;
+  //  @UI.identification: [{ position: 140 }]
+  //  exp_remark;
+  //  @UI: {  lineItem:       [ { position: 150 } ],
+  //        identification: [ { position: 150 } ],
+  //        selectionField: [ { position: 40 } ] }
+  //  invoice_number;
+  //  @UI.identification: [{ position: 160 }]
+  //  business_unit_company_code;
+  //  @UI.identification: [{ position: 190 }]
+  //  business_unit_country;
+  //  @UI.identification: [{ position: 220 }]
+  //  tenant_state;
+  //  @UI.identification: [{ position: 230 }]
+  //  posting_date;
+  //  @UI.identification: [{ position: 240 }]
+  //  company_code;
+  //  @UI.identification: [{ position: 250 }]
+  //  document_type;
+  //  @UI.identification: [{ position: 260 }]
+  //  document_number;
+  //  @UI.identification: [{ position: 270 }]
+  //  Comment_;
+  //  @UI.identification: [{ position: 280 }]
+  //  District;
+  //  @UI.identification: [{ position: 290 }]
+  //  senior_district;
+  //  @UI: {
+  ////  lineItem:       [ { position: 350 } ],
+  //        identification: [ { position: 300 } ],
+  //        selectionField: [ { position: 10 } ] }
+  //  Region;
+  //  @UI.identification: [{ position: 310 }]
+  //  senior_region;
+  //  @UI.identification: [{ position: 320 }]
+  //  Division;
+  //  @UI.identification: [{ position: 330 }]
+  //  Zzone;
+  //  @UI.identification: [{ position: 340 }]
+  //  escheat_rule;
+  //  @UI: {  lineItem:       [ { position: 350 } ],
+  //        identification: [ { position: 350 } ],
+  //        selectionField: [ { position: 60 } ] }
+  //  remit_type;
+  //  @UI.identification: [{ position: 360 }]
+  //  holding_period;
+  //  @UI.identification: [{ position: 370 }]
+  //  hp_uom;
+  //  @UI.identification: [{ position: 380 }]
+  //  pi_delay_period;
+
+  //  @UI.identification: [{ position: 400 }]
+  //  tracker_sent_date;
+  //  @UI.identification: [{ position: 410 }]
+  //  EpWfId;
+  //  @UI.identification: [{ position: 415 }]
+  //  created_by;
+  //  @UI.identification: [{ position: 420 }]
+  //  create_date;
+  //  @UI.identification: [{ position: 430 }]
+  //  create_time;
+  //  @UI.identification: [{ position: 440 }]
+  //  changed_by;
+  //  @UI.identification: [{ position: 450 }]
+  //  changed_date;
+  //  @UI.identification: [{ position: 460 }]
+  //  changed_time;
+
+}

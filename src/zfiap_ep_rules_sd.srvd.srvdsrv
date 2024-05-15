@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition'
+define service Zfiap_ep_rules_SD {
+  expose ZFIAP_EP_RULES_ENTITY;
+}

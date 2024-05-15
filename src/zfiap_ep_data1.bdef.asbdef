@@ -1,0 +1,26 @@
+unmanaged implementation in class zbp_fiap_ep_data1 unique;
+strict ( 2 );
+
+define behavior for ZFIAP_EP_DATA1 alias details
+late numbering
+lock master
+authorization master ( instance )
+etag master CreateDate
+{
+   field ( mandatory : create, readonly : update ) EdiTransNo;
+  field ( readonly ) ChangedBy;
+  field ( readonly ) ChangedDate;
+  field ( readonly ) ChangedTime;
+  field ( readonly ) CreatedBy;
+  field ( readonly ) CreateTime;
+  field ( readonly ) CreateDate;
+
+  create;
+  update;
+  delete;
+  action ( features : instance ) validate result [1] $self;
+  action ( features : instance ) post result [1] $self;
+ // action ( features : instance ) attach result [1] $self;
+  action attach parameter ZFIAP_EP_DATA_ATTACH result [1] $self;
+
+}

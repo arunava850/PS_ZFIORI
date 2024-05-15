@@ -1,0 +1,161 @@
+@Metadata.layer: #CORE
+annotate entity ZFIAP_EP_DATA3 with
+{
+  @UI.facet: [    {
+                label: 'General Information',
+                id: 'GeneralInfo',
+                type: #COLLECTION,
+                position: 10
+                },
+                     { id:            'Detail',
+                    purpose:       #STANDARD,
+                    type:          #IDENTIFICATION_REFERENCE,
+                    label:         'Invoice Details',
+                    parentId: 'GeneralInfo',
+                    position:      10 },
+                  {
+                      id: 'Upload',
+                      purpose: #STANDARD,
+                      type: #FIELDGROUP_REFERENCE,
+                      parentId: 'GeneralInfo',
+                      label: 'Upload',
+                      position: 20,
+                      targetQualifier: 'Upload'
+                  } ]
+  @EndUserText.label: 'Edi Trans Number'
+  @UI: {  lineItem:       [ { position: 10 } ],
+        identification: [ { position: 10 } ]
+        }
+  edi_trans_no;
+  @EndUserText.label: 'Attachment'
+  @UI: {  lineItem:       [ { position: 20,
+                              importance: #HIGH } ,
+                            { type: #FOR_ACTION,
+                              dataAction: 'validate',
+                              label: 'Validate',
+                              invocationGrouping: #CHANGE_SET,
+                              position: 10 },
+                            { type: #FOR_ACTION,
+                              dataAction: 'post',
+                              label: 'Post',
+                              invocationGrouping: #CHANGE_SET,
+                              position: 20 },
+                            { type: #FOR_ACTION,
+                              dataAction: 'attach',
+                              label: 'Attach',
+                              invocationGrouping: #CHANGE_SET,
+                              position: 30 }],
+        identification: [ { position: 20 } ]
+        }
+  @UI.hidden: true
+  attachment;
+  @EndUserText.label: 'Edi Trans Date'
+  @UI: {  lineItem:       [ { position: 30 } ],
+        identification: [ { position: 30 } ] }
+  edi_trans_date;
+  @EndUserText.label: 'Request Type'
+  @UI: {  lineItem:       [ { position: 40 } ],
+        identification: [ { position: 40 } ],
+        selectionField: [ { position: 10 } ] }
+  request_type;
+  @EndUserText.label: 'Attachment 1'
+  @UI: { lineItem:       [ { position: 45 } ],
+  identification: [ { position: 40 } ] }
+  //  ,
+  //         fieldGroup:     [ { position: 45, qualifier: 'Upload' , label: 'Attachment1'} ]}
+  ATTFILE;
+  @UI.hidden: true
+  MIMETYPE;
+  @EndUserText.label: 'Approval Status'
+  @UI: {  lineItem:       [ { position: 50 } ],
+        identification: [ { position: 50 } ],
+        selectionField: [ { position: 20 } ] }
+  approval_status;
+  // @UI.identification: [{ position: 60 }]
+  @UI: {  lineItem:       [ { position: 60 } ],
+      identification: [ { position: 60 } ],
+      selectionField: [ { position: 30 } ] }
+  tenant_number;
+  @UI.identification: [{ position: 70 }]
+  tenant_name;
+  @UI: {  lineItem:       [ { position: 80 } ],
+        identification: [ { position: 80 } ],
+        selectionField: [ { position: 40 } ] }
+  payee_number;
+  @UI.identification: [{ position: 90 }]
+  payee_name;
+  @UI.identification: [{ position: 100 }]
+  sales_date;
+  @UI.identification: [{ position: 130 }]
+  Waers;
+  @UI.identification: [{ position: 140 }]
+  exp_remark;
+  @UI: {  lineItem:       [ { position: 150 } ],
+        identification: [ { position: 150 } ],
+        selectionField: [ { position: 40 } ] }
+  invoice_number;
+  @UI.identification: [{ position: 160 }]
+  business_unit_company_code;
+  @UI: {  lineItem:       [ { position: 170 } ],
+        identification: [ { position: 170 } ],
+        selectionField: [ { position: 50 } ] }
+  business_unit;
+  @UI.identification: [{ position: 180 }]
+  business_unit_state;
+  @UI.identification: [{ position: 190 }]
+  business_unit_country;
+  @UI.identification: [{ position: 220 }]
+  tenant_state;
+  @UI.identification: [{ position: 230 }]
+  posting_date;
+  @UI.identification: [{ position: 240 }]
+  company_code;
+  @UI.identification: [{ position: 250 }]
+  document_type;
+  @UI.identification: [{ position: 260 }]
+  document_number;
+  @UI.identification: [{ position: 270 }]
+  Comment_;
+  @UI.identification: [{ position: 280 }]
+  District;
+  @UI.identification: [{ position: 290 }]
+  senior_district;
+  @UI.identification: [{ position: 300 }]
+  Region;
+  @UI.identification: [{ position: 310 }]
+  senior_region;
+  @UI.identification: [{ position: 320 }]
+  Division;
+  @UI.identification: [{ position: 330 }]
+  Zzone;
+  @UI.identification: [{ position: 340 }]
+  escheat_rule;
+  @UI: {  lineItem:       [ { position: 350 } ],
+        identification: [ { position: 350 } ],
+        selectionField: [ { position: 60 } ] }
+  remit_type;
+  @UI.identification: [{ position: 360 }]
+  holding_period;
+  @UI.identification: [{ position: 370 }]
+  hp_uom;
+  @UI.identification: [{ position: 380 }]
+  pi_delay_period;
+  @UI.identification: [{ position: 390 }]
+  hp_expire_date;
+  @UI.identification: [{ position: 400 }]
+  tracker_sent_date;
+  @UI.identification: [{ position: 410 }]
+  created_by;
+  @UI.identification: [{ position: 420 }]
+  create_date;
+  @UI.identification: [{ position: 430 }]
+  create_time;
+  @UI.identification: [{ position: 440 }]
+  changed_by;
+  @UI.identification: [{ position: 450 }]
+  changed_date;
+  @UI.identification: [{ position: 460 }]
+  changed_time;
+
+
+}

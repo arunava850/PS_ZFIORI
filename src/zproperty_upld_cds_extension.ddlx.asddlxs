@@ -1,0 +1,618 @@
+@Metadata.layer: #CORE
+annotate entity ZPROPERTY_UPLD_CDS with
+{
+  @UI.facet: [ { id:              'State',
+                   purpose:         #STANDARD,
+                   type:            #IDENTIFICATION_REFERENCE,
+                   label:           'Detail',
+                   position:        10 } ]
+  @EndUserText.label: 'SAP Plant Number'@UI: {  lineItem:       [ { position: 10 } ],         identification: [ { position: 10 } ],         selectionField: [ { position: 10 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'I_Plant',
+         element: 'Plant' }
+  }]
+  Plant;
+  @EndUserText.label: 'Legacy Property Number'@UI: {  lineItem:       [ { position: 20 } ],         identification: [ { position: 20 } ],         selectionField: [ { position: 20 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'ZPROPERTY_CDS',
+         element: 'LegacyPropertyNumber' }
+  }]
+  LegacyPropertyNumber;
+  @EndUserText.label: 'Property Description'@UI: {  lineItem:       [ { position: 30 } ],         identification: [ { position: 30 } ],         selectionField: [ { position: 30 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'ZPROPERTY_CDS',
+         element: 'Description' }
+  }]
+  Description;
+
+
+
+
+
+  @EndUserText.label: 'District'@UI: {           selectionField: [ { position: 90 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'ZFI_VH_ZPROPERTY_DISTRICT',
+         element: 'County' }
+  }]
+  County;
+  @EndUserText.label: 'Country/Region Key'@UI: {           selectionField: [ { position: 100 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'I_Country',
+         element: 'Country' }
+  }]
+  Country;
+  @EndUserText.label: 'Property type'@UI: {           selectionField: [ { position: 110 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'ZFI_VH_ZPROPERTY_type',
+         element: 'PropertyType' }
+  }]
+  PropertyType;
+  @EndUserText.label: 'Retail PC'@UI: {           selectionField: [ { position: 120 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'I_ProfitCenter',
+         element: 'ProfitCenter' }
+  }]
+  RetailPc;
+
+  @EndUserText.label: 'Retail PC Company Code'@UI: {           selectionField: [ { position: 140 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'I_CompanyCode',
+         element: 'CompanyCode' }
+  }]
+  RetailPcCc;
+
+
+
+  @EndUserText.label: 'Storage PC'@UI: {           selectionField: [ { position: 180 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'I_ProfitCenter',
+         element: 'ProfitCenter' }
+  }]
+  StoragePc;
+
+  @EndUserText.label: 'Storage PC Company Code'@UI: {           selectionField: [ { position: 200 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'I_CompanyCode',
+         element: 'CompanyCode' }
+  }]
+  StoragePcCc;
+
+
+
+  @EndUserText.label: 'Storage CBT PC'@UI: {           selectionField: [ { position: 240 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'I_ProfitCenter',
+         element: 'ProfitCenter' }
+  }]
+  StorageCbtPc;
+
+  @EndUserText.label: 'Storage CBT PC Company Code'@UI: {           selectionField: [ { position: 260 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'I_CompanyCode',
+         element: 'CompanyCode' }
+  }]
+  StorageCbtPcCc;
+
+
+
+  @EndUserText.label: 'Tennent Ins PC'@UI: {           selectionField: [ { position: 300 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'I_ProfitCenter',
+         element: 'ProfitCenter' }
+  }]
+  TennentInsPc;
+
+  @EndUserText.label: 'Tennent PC Company Code'@UI: {           selectionField: [ { position: 320 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'I_CompanyCode',
+         element: 'CompanyCode' }
+  }]
+  TennentInsPcCc;
+
+
+
+  @EndUserText.label: 'Commercial PC'@UI: {           selectionField: [ { position: 360 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'I_ProfitCenter',
+         element: 'ProfitCenter' }
+  }]
+  CommercialPc;
+
+  @EndUserText.label: 'Commercial PC Company Code'@UI: {           selectionField: [ { position: 380 } ]}@Consumption.valueHelpDefinition: [
+  { entity:  { name:    'I_CompanyCode',
+         element: 'CompanyCode' }
+  }]
+  CommercialPcCc;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @EndUserText.label: 'Published Phone No'@UI: {  lineItem:       [ { cssDefault : {width: '8rem'}, position: 550 } ],         identification: [ { position: 550 } ]}
+  PublishedPhoneNo;
+
+  @EndUserText.label: 'Toll Free number'@UI: {  lineItem:       [ { cssDefault : {width: '8rem'}, position: 570 } ],         identification: [ { position: 570 } ]}
+  TollFreeNumber;
+  @EndUserText.label: 'Local Phone number'@UI: {  lineItem:       [ { cssDefault : {width: '8rem'}, position: 580 } ],         identification: [ { position: 580 } ]}
+  LocalPhoneNumber;
+  @EndUserText.label: 'Toll Free number2'@UI: {  lineItem:       [ { cssDefault : {width: '8rem'}, position: 590 } ],         identification: [ { position: 590 } ]}
+  TollFreeNumber2;
+  @EndUserText.label: 'Toll Free number3'@UI: {  lineItem:       [ { cssDefault : {width: '8rem'}, position: 600 } ],         identification: [ { position: 600 } ]}
+  TollFreeNumber3;
+  @EndUserText.label: 'Toll Free number4'@UI: {  lineItem:       [ { cssDefault : {width: '8rem'}, position: 610 } ],         identification: [ { position: 610 } ]}
+  TollFreeNumber4;
+  @EndUserText.label: 'Alarm Phone Number'@UI: {  lineItem:       [ { cssDefault : {width: '8rem'}, position: 620 } ],         identification: [ { position: 620 } ]}
+  AlarmPhoneNumber;
+  @EndUserText.label: 'Alarm Phone Number1'@UI: {  lineItem:       [ { cssDefault : {width: '8rem'}, position: 630 } ],         identification: [ { position: 630 } ]}
+  AlarmPhoneNumber1;
+  @EndUserText.label: 'Alarm Phone Number2'@UI: {  lineItem:       [ { cssDefault : {width: '8rem'}, position: 640 } ],         identification: [ { position: 640 } ]}
+  AlarmPhoneNumber2;
+  @EndUserText.label: 'Burglar Alarm Phone Number'@UI: {  lineItem:       [ { cssDefault : {width: '8rem'}, position: 650 } ],         identification: [ { position: 650 } ]}
+  BurgAlarmPhoneNumber;
+  @EndUserText.label: 'Cell Phone Number'@UI: {  lineItem:       [ { cssDefault : {width: '8rem'}, position: 660 } ],         identification: [ { position: 660 } ]}
+  CellPhoneNumber;
+  @EndUserText.label: 'Direct Phone No2'@UI: {  lineItem:       [ { cssDefault : {width: '8rem'}, position: 670 } ],         identification: [ { position: 670 } ]}
+  DirectPhoneNo2;
+  @EndUserText.label: 'Direct Phone No3'@UI: {  lineItem:       [ { cssDefault : {width: '8rem'}, position: 680 } ],         identification: [ { position: 680 } ]}
+  DirectPhoneNo3;
+  @EndUserText.label: 'Elevator Phone No1'@UI: {  lineItem:       [ { cssDefault : {width: '8rem'}, position: 690 } ],         identification: [ { position: 690 } ]}
+  ElevatorPhoneNo1;
+  @EndUserText.label: 'Elevator Phone No2'@UI: {  lineItem:       [ { cssDefault : {width: '8rem'}, position: 700 } ],         identification: [ { position: 700 } ]}
+  ElevatorPhoneNo2;
+  @EndUserText.label: 'Elevator Phone No3'@UI: {  lineItem:       [ { cssDefault : {width: '8rem'}, position: 710 } ],         identification: [ { position: 710 } ]}
+  ElevatorPhoneNo3;
+  @EndUserText.label: 'Extension Number'@UI: {  lineItem:       [ { position: 720 } ],         identification: [ { position: 720 } ]}
+  ExtensionNumber;
+  @EndUserText.label: 'Office Phone Number'@UI: {  lineItem:       [ { cssDefault : {width: '8rem'}, position: 730 } ],         identification: [ { position: 730 } ]}
+  OfficePhoneNumber;
+  @EndUserText.label: 'Published Phone No2'@UI: {  lineItem:       [ { cssDefault : {width: '8rem'}, position: 740 } ],         identification: [ { position: 740 } ]}
+  PublishedPhoneNo2;
+
+  @EndUserText.label: 'Ranking Property'@UI: {  lineItem:       [ { position: 760 } ],         identification: [ { position: 760 } ]}
+  Rank;
+  @EndUserText.label: 'Network 1 IP address'@UI: {  lineItem:       [ { position: 770 } ],         identification: [ { position: 770 } ]}
+  Network1IpAddress;
+  @EndUserText.label: 'Network 2 IP address'@UI: {  lineItem:       [ { position: 780 } ],         identification: [ { position: 780 } ]}
+  Network2IpAddress;
+  @EndUserText.label: 'Network Type'@UI: {  lineItem:       [ { position: 790 } ],         identification: [ { position: 790 } ]}
+  NetworkType;
+  @EndUserText.label: 'Network Vendor'@UI: {  lineItem:       [ { position: 800 } ],         identification: [ { position: 800 } ]}
+  NetworkVendor;
+  @EndUserText.label: 'Network Router Address'@UI: {  lineItem:       [ { position: 810 } ],         identification: [ { position: 810 } ]}
+  NetworkRouterAddress;
+  @EndUserText.label: 'Active'@UI: {  lineItem:       [ { position: 820 } ],         identification: [ { position: 820 } ]}
+  Active;
+  @EndUserText.label: 'Business Unit type'@UI: {  lineItem:       [ { position: 830 } ],         identification: [ { position: 830 } ]}
+  BusinessUnitType;
+  @EndUserText.label: 'Customer code'@UI: {  lineItem:       [ { position: 840 } ],         identification: [ { position: 840 } ]}
+  CustomerCode;
+  @EndUserText.label: 'Entity type'@UI: {  lineItem:       [ { position: 850 } ],         identification: [ { position: 850 } ]}
+  EntityType;
+  @EndUserText.label: 'Combined Surviving number'@UI: {  lineItem:       [ { position: 860 } ],         identification: [ { position: 860 } ]}
+  CombinedSurvivingNumber;
+  @EndUserText.label: 'Note 1'@UI: {  lineItem:       [ { position: 870 } ],         identification: [ { position: 870 } ]}
+  Note1;
+  @EndUserText.label: 'Note 2'@UI: {  lineItem:       [ { position: 880 } ],         identification: [ { position: 880 } ]}
+  Note2;
+  @EndUserText.label: 'Note 3'@UI: {  lineItem:       [ { position: 890 } ],         identification: [ { position: 890 } ]}
+  Note3;
+  @EndUserText.label: 'Market Key'@UI: {  lineItem:       [ { position: 900 } ],         identification: [ { position: 900 } ]}
+  MarketKey;
+  @EndUserText.label: 'Metro Statisical Area'@UI: {  lineItem:       [ { position: 910 } ],         identification: [ { position: 910 } ]}
+  MetroStatisicalArea;
+  @EndUserText.label: 'Neighborwood'@UI: {  lineItem:       [ { position: 920 } ],         identification: [ { position: 920 } ]}
+  Neighborwood;
+  @EndUserText.label: 'Same Store'@UI: {  lineItem:       [ { position: 930 } ],         identification: [ { position: 930 } ]}
+  SameStore;
+  @EndUserText.label: 'A Type Property'@UI: {  lineItem:       [ { position: 940 } ],         identification: [ { position: 940 } ]}
+  ATypeProperty;
+  @EndUserText.label: 'Bill Board'@UI: {  lineItem:       [ { position: 950 } ],         identification: [ { position: 950 } ]}
+  BillBoard;
+  @EndUserText.label: 'Comercial'@UI: {  lineItem:       [ { position: 960 } ],         identification: [ { position: 960 } ]}
+  Comercial;
+  @EndUserText.label: 'Cell Tower'@UI: {  lineItem:       [ { position: 970 } ],         identification: [ { position: 970 } ]}
+  CellTower;
+  @EndUserText.label: 'Solar'@UI: {  lineItem:       [ { position: 980 } ],         identification: [ { position: 980 } ]}
+  Solar;
+  @EndUserText.label: 'Key Tranining Professional'@UI: {  lineItem:       [ { position: 990 } ],         identification: [ { position: 990 } ]}
+  KeyTraniningProfessional;
+  @EndUserText.label: 'Market Class'@UI: {  lineItem:       [ { position: 1000 } ],         identification: [ { position: 1000 } ]}
+  MartketClass;
+  @EndUserText.label: 'Tax Owner'@UI: {  lineItem:       [ { position: 1010 } ],         identification: [ { position: 1010 } ]}
+  TaxOwner;
+  @EndUserText.label: 'Tax Owner FEIN'@UI: {  lineItem:       [ { position: 1020 } ],         identification: [ { position: 1020 } ]}
+  TaxOwnerFein;
+  @EndUserText.label: 'Legal Owner'@UI: {  lineItem:       [ { position: 1030 } ],         identification: [ { position: 1030 } ]}
+  LegalOwner;
+  @EndUserText.label: 'Legal Owner FEIN'@UI: {  lineItem:       [ { position: 1040 } ],         identification: [ { position: 1040 } ]}
+  LegalOwnerFein;
+  @EndUserText.label: 'Owner of Record'@UI: {  lineItem:       [ { position: 1050 } ],         identification: [ { position: 1050 } ]}
+  OwnerOfRecord;
+  @EndUserText.label: 'Solar Entity'@UI: {  lineItem:       [ { position: 1060 } ],         identification: [ { position: 1060 } ]}
+  SolarEntity;
+  @EndUserText.label: 'Restart Date'@UI: {  lineItem:       [ { position: 1070 } ],         identification: [ { position: 1070 } ]}
+  ReStartDate;
+  @EndUserText.label: 'New Ownership date'@UI: {  lineItem:       [ { position: 1080 } ],         identification: [ { position: 1080 } ]}
+  NewOwnershipDate;
+  @EndUserText.label: 'Original Start Date'@UI: {  lineItem:       [ { position: 1090 } ],         identification: [ { position: 1090 } ]}
+  OriginalStartDate;
+  @EndUserText.label: 'Termination Date'@UI: {  lineItem:       [ { position: 1100 } ],         identification: [ { position: 1100 } ]}
+  TerminationDate;
+  @EndUserText.label: 'BU Create Date'@UI: {  lineItem:       [ { position: 1110 } ],         identification: [ { position: 1110 } ]}
+  BuCreateDate;
+  @EndUserText.label: 'Finrep Num 1'@UI: {  lineItem:       [ { position: 1120 } ],         identification: [ { position: 1120 } ]}
+  FinrepNum1;
+  @EndUserText.label: 'Finrep Num 2'@UI: {  lineItem:       [ { position: 1130 } ],         identification: [ { position: 1130 } ]}
+  FinrepNum2;
+  @EndUserText.label: 'Ins Prem (2000)'@UI: {  lineItem:       [ { position: 1140 } ],         identification: [ { position: 1140 } ]}
+  InsPrem2000;
+  @EndUserText.label: 'Ins Prem (3000)'@UI: {  lineItem:       [ { position: 1150 } ],         identification: [ { position: 1150 } ]}
+  InsPrem3000;
+  @EndUserText.label: 'Ins Prem (4000)'@UI: {  lineItem:       [ { position: 1160 } ],         identification: [ { position: 1160 } ]}
+  InsPrem4000;
+  @EndUserText.label: 'Ins Prem (5000)'@UI: {  lineItem:       [ { position: 1170 } ],         identification: [ { position: 1170 } ]}
+  InsPrem5000;
+  @EndUserText.label: 'Finrep Num 7'@UI: {  lineItem:       [ { position: 1180 } ],         identification: [ { position: 1180 } ]}
+  FinrepNum7;
+  @EndUserText.label: 'Finrep Num 8'@UI: {  lineItem:       [ { position: 1190 } ],         identification: [ { position: 1190 } ]}
+  FinrepNum8;
+  @EndUserText.label: 'Finrep Num 9'@UI: {  lineItem:       [ { position: 1200 } ],         identification: [ { position: 1200 } ]}
+  FinrepNum9;
+  @EndUserText.label: 'ERental - Max Days'@UI: {  lineItem:       [ { position: 1210 } ],         identification: [ { position: 1210 } ]}
+  ErentalMaxDays;
+  @EndUserText.label: 'Flood Insurance Effective Date'@UI: {  lineItem:       [ { position: 1220 } ],         identification: [ { position: 1220 } ]}
+  FloodInsEffDate;
+  @EndUserText.label: 'Finrep Date 2'@UI: {  lineItem:       [ { position: 1230 } ],         identification: [ { position: 1230 } ]}
+  FinrepDate2;
+  @EndUserText.label: 'Finrep Date 3'@UI: {  lineItem:       [ { position: 1240 } ],         identification: [ { position: 1240 } ]}
+  FinrepDate3;
+  @EndUserText.label: 'Finrep Date 4'@UI: {  lineItem:       [ { position: 1250 } ],         identification: [ { position: 1250 } ]}
+  FinrepDate4;
+  @EndUserText.label: 'Finrep Date 5'@UI: {  lineItem:       [ { position: 1260 } ],         identification: [ { position: 1260 } ]}
+  FinrepDate5;
+  @EndUserText.label: 'Finrep Date 6'@UI: {  lineItem:       [ { position: 1270 } ],         identification: [ { position: 1270 } ]}
+  FinrepDate6;
+  @EndUserText.label: 'Finrep Date 7'@UI: {  lineItem:       [ { position: 1280 } ],         identification: [ { position: 1280 } ]}
+  FinrepDate7;
+  @EndUserText.label: 'Finrep Date 8'@UI: {  lineItem:       [ { position: 1290 } ],         identification: [ { position: 1290 } ]}
+  FinrepDate8;
+  @EndUserText.label: 'Finrep Date 9'@UI: {  lineItem:       [ { position: 1300 } ],         identification: [ { position: 1300 } ]}
+  FinrepDate9;
+  @EndUserText.label: 'Finrep Date 10'@UI: {  lineItem:       [ { position: 1310 } ],         identification: [ { position: 1310 } ]}
+  FinrepDate10;
+
+  @EndUserText.label: 'Office Sunday Open Hr'@UI: {  lineItem:       [ { position: 1330 } ],         identification: [ { position: 1330 } ]}
+  OfficeSundayOpenHr;
+  @EndUserText.label: 'Office Sunday Close Hr'@UI: {  lineItem:       [ { position: 1340 } ],         identification: [ { position: 1340 } ]}
+  OfficeSundayCloseHr;
+  @EndUserText.label: 'Office Monday Open Hr'@UI: {  lineItem:       [ { position: 1350 } ],         identification: [ { position: 1350 } ]}
+  OfficeMondayOpenHr;
+  @EndUserText.label: 'Office Monday Close Hr'@UI: {  lineItem:       [ { position: 1360 } ],         identification: [ { position: 1360 } ]}
+  OfficeMondayCloseHr;
+  @EndUserText.label: 'Office Tuesday Open Hr'@UI: {  lineItem:       [ { position: 1370 } ],         identification: [ { position: 1370 } ]}
+  OfficeTuesdayOpenHr;
+  @EndUserText.label: 'Office Tuesday Close Hr'@UI: {  lineItem:       [ { position: 1380 } ],         identification: [ { position: 1380 } ]}
+  OfficeTuesdayCloseHr;
+  @EndUserText.label: 'Office Wednesday Open Hr'@UI: {  lineItem:       [ { position: 1390 } ],         identification: [ { position: 1390 } ]}
+  OfficeWednessdayOpenHr;
+  @EndUserText.label: 'Office Wednesday Close Hr'@UI: {  lineItem:       [ { position: 1400 } ],         identification: [ { position: 1400 } ]}
+  OfficeWednessdayCloseHr;
+  @EndUserText.label: 'Office Thursday Open Hr'@UI: {  lineItem:       [ { position: 1410 } ],         identification: [ { position: 1410 } ]}
+  OfficeThursdayOpenHr;
+  @EndUserText.label: 'Office Thursday Close Hr'@UI: {  lineItem:       [ { position: 1420 } ],         identification: [ { position: 1420 } ]}
+  OfficeThursdayCloseHr;
+  @EndUserText.label: 'Office Friday Open Hr'@UI: {  lineItem:       [ { position: 1430 } ],         identification: [ { position: 1430 } ]}
+  OfficeFridayOpenHr;
+  @EndUserText.label: 'Office Friday Close Hr'@UI: {  lineItem:       [ { position: 1440 } ],         identification: [ { position: 1440 } ]}
+  OfficeFridayCloseHr;
+  @EndUserText.label: 'Office Saturday Open Hr'@UI: {  lineItem:       [ { position: 1450 } ],         identification: [ { position: 1450 } ]}
+  OfficeSaturdayOpenHr;
+  @EndUserText.label: 'Office Saturday Close Hr'@UI: {  lineItem:       [ { position: 1460 } ],         identification: [ { position: 1460 } ]}
+  OfficeSaturdayCloseHr;
+  @EndUserText.label: 'Gate Sunday Open Hr'@UI: {  lineItem:       [ { position: 1470 } ],         identification: [ { position: 1470 } ]}
+  GateSundayOpenHr;
+  @EndUserText.label: 'Gate Sunday Close Hr'@UI: {  lineItem:       [ { position: 1480 } ],         identification: [ { position: 1480 } ]}
+  GateSundayCloseHr;
+  @EndUserText.label: 'Gate Monday Open Hr'@UI: {  lineItem:       [ { position: 1490 } ],         identification: [ { position: 1490 } ]}
+  GateMondayOpenHr;
+  @EndUserText.label: 'Gate Monday Close Hr'@UI: {  lineItem:       [ { position: 1500 } ],         identification: [ { position: 1500 } ]}
+  GateMondayCloseHr;
+  @EndUserText.label: 'Gate Tuesday Open Hr'@UI: {  lineItem:       [ { position: 1510 } ],         identification: [ { position: 1510 } ]}
+  GateTuesdayOpenHr;
+  @EndUserText.label: 'Gate Tuesday Close Hr'@UI: {  lineItem:       [ { position: 1520 } ],         identification: [ { position: 1520 } ]}
+  GateTuesdayCloseHr;
+  @EndUserText.label: 'Gate Wednesday Open Hr'@UI: {  lineItem:       [ { position: 1530 } ],         identification: [ { position: 1530 } ]}
+  GateWednessdayOpenHr;
+  @EndUserText.label: 'Gate Wednesday Close Hr'@UI: {  lineItem:       [ { position: 1540 } ],         identification: [ { position: 1540 } ]}
+  GateWednessdayCloseHr;
+  @EndUserText.label: 'Gate Thursday Open Hr'@UI: {  lineItem:       [ { position: 1550 } ],         identification: [ { position: 1550 } ]}
+  GateThursdayOpenHr;
+  @EndUserText.label: 'Gate Thursday Close Hr'@UI: {  lineItem:       [ { position: 1560 } ],         identification: [ { position: 1560 } ]}
+  GateThursdayCloseHr;
+  @EndUserText.label: 'Gate Friday Open Hr'@UI: {  lineItem:       [ { position: 1570 } ],         identification: [ { position: 1570 } ]}
+  GateFridayOpenHr;
+  @EndUserText.label: 'Gate Friday Close Hr'@UI: {  lineItem:       [ { position: 1580 } ],         identification: [ { position: 1580 } ]}
+  GateFridayCloseHr;
+  @EndUserText.label: 'Gate Saturday Open Hr'@UI: {  lineItem:       [ { position: 1590 } ],         identification: [ { position: 1590 } ]}
+  GateSaturdayOpenHr;
+  @EndUserText.label: 'Gate Saturday Close Hr'@UI: {  lineItem:       [ { position: 1600 } ],         identification: [ { position: 1600 } ]}
+  GateSaturdayCloseHr;
+  @EndUserText.label: 'Gate Thanks Giving Open Hr'@UI: {  lineItem:       [ { position: 1610 } ],         identification: [ { position: 1610 } ]}
+  GateThanksgivingOpenHr;
+  @EndUserText.label: 'Gate Thanks Giving Close Hr'@UI: {  lineItem:       [ { position: 1620 } ],         identification: [ { position: 1620 } ]}
+  GateThanksgivingCloseHr;
+  @EndUserText.label: 'Gate Christmas Open Hr'@UI: {  lineItem:       [ { position: 1630 } ],         identification: [ { position: 1630 } ]}
+  GateChristmasOpenHr;
+  @EndUserText.label: 'Gate Christmas Close Hr'@UI: {  lineItem:       [ { position: 1640 } ],         identification: [ { position: 1640 } ]}
+  GateChristmasCloseHr;
+  @EndUserText.label: 'Gate NewYear Open Hr'@UI: {  lineItem:       [ { position: 1650 } ],         identification: [ { position: 1650 } ]}
+  GateNewyearOpenHr;
+  @EndUserText.label: 'Gate NewYear Close Hr'@UI: {  lineItem:       [ { position: 1660 } ],         identification: [ { position: 1660 } ]}
+  GateNewyearCloseHr;
+  @EndUserText.label: 'Property Features'@UI: {  lineItem:       [ { position: 1670 } ],         identification: [ { position: 1670 } ]}
+  PropertyFeatures;
+  @EndUserText.label: 'Driving Directions'@UI: {  lineItem:       [ { position: 1680 } ],         identification: [ { position: 1680 } ]}
+  DrivingDirections;
+  @EndUserText.label: 'Special Notes'@UI: {  lineItem:       [ { position: 1690 } ],         identification: [ { position: 1690 } ]}
+  SpecialNotes;
+  @EndUserText.label: 'Lockers'@UI: {  lineItem:       [ { position: 1700 } ],         identification: [ { position: 1700 } ]}
+  Lockers;
+  @EndUserText.label: 'Large Truck Access'@UI: {  lineItem:       [ { position: 1710 } ],         identification: [ { position: 1710 } ]}
+  LargeTruckAccess;
+  @EndUserText.label: 'Furniture Dollies'@UI: {  lineItem:       [ { position: 1720 } ],         identification: [ { position: 1720 } ]}
+  FurnitureDollies;
+  @EndUserText.label: 'Basement'@UI: {  lineItem:       [ { position: 1730 } ],         identification: [ { position: 1730 } ]}
+  Basement;
+  @EndUserText.label: 'Hand Trucks'@UI: {  lineItem:       [ { position: 1740 } ],         identification: [ { position: 1740 } ]}
+  HandTrucks;
+  @EndUserText.label: 'Carts'@UI: {  lineItem:       [ { position: 1750 } ],         identification: [ { position: 1750 } ]}
+  Carts;
+  @EndUserText.label: 'Year Built'@UI: {  lineItem:       [ { position: 1760 } ],         identification: [ { position: 1760 } ]}
+  YearBuilt;
+  @EndUserText.label: 'Cap Index Risk'@UI: {  lineItem:       [ { position: 1770 } ],         identification: [ { position: 1770 } ]}
+  CapIndexRisk;
+  @EndUserText.label: 'Number Of Buildings'@UI: {  lineItem:       [ { position: 1780 } ],         identification: [ { position: 1780 } ]}
+  NumberOfBuildings;
+  @EndUserText.label: 'Construction Code'@UI: {  lineItem:       [ { position: 1790 } ],         identification: [ { position: 1790 } ]}
+  ConstructionCode;
+  @EndUserText.label: 'Number of Stories'@UI: {  lineItem:       [ { position: 1800 } ],         identification: [ { position: 1800 } ]}
+  NumberOfStories;
+  @EndUserText.label: 'Construction Code 2'@UI: {  lineItem:       [ { position: 1810 } ],         identification: [ { position: 1810 } ]}
+  ConstructionCode2;
+  @EndUserText.label: 'Lot Size'@UI: {  lineItem:       [ { position: 1820 } ],         identification: [ { position: 1820 } ]}
+  LotSize;
+  @EndUserText.label: 'Building Classification'@UI: {  lineItem:       [ { position: 1830 } ],         identification: [ { position: 1830 } ]}
+  BuildingClassification;
+  @EndUserText.label: 'Gross Square Footage'@UI: {  lineItem:       [ { position: 1840 } ],         identification: [ { position: 1840 } ]}
+  GrossSquareFootage;
+  @EndUserText.label: 'Flood Zone'@UI: {  lineItem:       [ { position: 1850 } ],         identification: [ { position: 1850 } ]}
+  FloodZone;
+  @EndUserText.label: '25 Miles of Costal Water'@UI: {  lineItem:       [ { position: 1860 } ],         identification: [ { position: 1860 } ]}
+  MilesOfCostalWater25;
+  @EndUserText.label: 'Sprinkler'@UI: {  lineItem:       [ { position: 1870 } ],         identification: [ { position: 1870 } ]}
+  Sprinkler;
+  @EndUserText.label: 'Sprinkler Remarks'@UI: {  lineItem:       [ { position: 1880 } ],         identification: [ { position: 1880 } ]}
+  SprinklerRemark;
+  @EndUserText.label: 'Fire Alarm'@UI: {  lineItem:       [ { position: 1890 } ],         identification: [ { position: 1890 } ]}
+  FireAlarm;
+  @EndUserText.label: 'Fire Alarm Remarks'@UI: {  lineItem:       [ { position: 1900 } ],         identification: [ { position: 1900 } ]}
+  FireAlarmRemarks;
+  @EndUserText.label: 'Bugler Alarm'@UI: {  lineItem:       [ { position: 1910 } ],         identification: [ { position: 1910 } ]}
+  BuglerAlarm;
+  @EndUserText.label: 'Bugler Alarm Remarks'@UI: {  lineItem:       [ { position: 1920 } ],         identification: [ { position: 1920 } ]}
+  BuglerAlarmRemarks;
+  @EndUserText.label: 'Parking Spaces'@UI: {  lineItem:       [ { position: 1930 } ],         identification: [ { position: 1930 } ]}
+  ParkingSpaces;
+  @EndUserText.label: 'Elevators'@UI: {  lineItem:       [ { position: 1940 } ],         identification: [ { position: 1940 } ]}
+  Elevators;
+  @EndUserText.label: 'Apartments'@UI: {  lineItem:       [ { position: 1950 } ],         identification: [ { position: 1950 } ]}
+  Apartments;
+  @EndUserText.label: 'Survelliance Camera'@UI: {  lineItem:       [ { position: 1960 } ],         identification: [ { position: 1960 } ]}
+  SurvellianceCamera;
+  @EndUserText.label: 'Survilance Camera Remarks'@UI: {  lineItem:       [ { position: 1970 } ],         identification: [ { position: 1970 } ]}
+  SurvellianceCameraRemarks;
+  @EndUserText.label: 'Acquired From'@UI: {  lineItem:       [ { position: 1980 } ],         identification: [ { position: 1980 } ]}
+  AcquiredFrom;
+  @EndUserText.label: 'Acquired / Developed / Third Party'@UI: {  lineItem:       [ { position: 1990 } ],         identification: [ { position: 1990 } ]}
+  AcquiredDevelopedThirdP;
+  @EndUserText.label: 'PSD'@UI: {  lineItem:       [ { position: 2000 } ],         identification: [ { position: 2000 } ]}
+  Psd;
+  @EndUserText.label: 'Property Latitude'@UI: {  lineItem:       [ { position: 2010 } ],         identification: [ { position: 2010 } ]}
+  PropertyLatitude;
+  @EndUserText.label: 'Property Longitude'@UI: {  lineItem:       [ { position: 2020 } ],         identification: [ { position: 2020 } ]}
+  PropertyLongitude;
+  @EndUserText.label: 'Property Admin Fee'@UI: {  lineItem:       [ { position: 2030 } ],         identification: [ { position: 2030 } ]}
+  PropertyAdminFee;
+  @EndUserText.label: 'Admin Fee effective date'@UI: {  lineItem:       [ { position: 2040 } ],         identification: [ { position: 2040 } ]}
+  AdminFeeEffectiveDate;
+  @EndUserText.label: 'Property Churn Status'@UI: {  lineItem:       [ { position: 2050 } ],         identification: [ { position: 2050 } ]}
+  PropertyChurnStatus;
+  @EndUserText.label: 'Climate Control'@UI: {  lineItem:       [ { position: 2060 } ],         identification: [ { position: 2060 } ]}
+  ClimateControl;
+  @EndUserText.label: 'Property Website Reservations Enabled'@UI: {  lineItem:       [ { position: 2070 } ],         identification: [ { position: 2070 } ]}
+  PropertyWebsiteReservations;
+  @EndUserText.label: 'Website Enabled Date'@UI: {  lineItem:       [ { position: 2080 } ],         identification: [ { position: 2080 } ]}
+  WebsiteEnabledDate;
+  @EndUserText.label: 'Property Call Center Reservation Enabled'@UI: {  lineItem:       [ { position: 2090 } ],         identification: [ { position: 2090 } ]}
+  PropertyCallCenterReservati;
+  @EndUserText.label: 'Call Center Enabled Date'@UI: {  lineItem:       [ { position: 2100 } ],         identification: [ { position: 2100 } ]}
+  CallCenterEnabledDate;
+  @EndUserText.label: 'Property NFS Fee'@UI: {  lineItem:       [ { position: 2110 } ],         identification: [ { position: 2110 } ]}
+  PropertyNfsFee;
+  @EndUserText.label: 'Max Reservation days'@UI: {  lineItem:       [ { position: 2120 } ],         identification: [ { position: 2120 } ]}
+  MaxReservationDays;
+  @EndUserText.label: 'NSF Fee Effective Date'@UI: {  lineItem:       [ { position: 2130 } ],         identification: [ { position: 2130 } ]}
+  NsfFeeEffectiveDate;
+  @EndUserText.label: 'Property NFS Ach Fee'@UI: {  lineItem:       [ { position: 2140 } ],         identification: [ { position: 2140 } ]}
+  PropertyNfsAchFee;
+  @EndUserText.label: 'NFS Ach Fee effective date'@UI: {  lineItem:       [ { position: 2150 } ],         identification: [ { position: 2150 } ]}
+  NfsAchFeeEffectiveDate;
+  @EndUserText.label: 'Property Insurance Frozen'@UI: {  lineItem:       [ { position: 2160 } ],         identification: [ { position: 2160 } ]}
+  PropertyInsuranceFrozen;
+  @EndUserText.label: 'Property Insurance Cancel Day'@UI: {  lineItem:       [ { position: 2170 } ],         identification: [ { position: 2170 } ]}
+  PropertyInsuranceCancelDay;
+  @EndUserText.label: 'Pre Reservation Days'@UI: {  lineItem:       [ { position: 2180 } ],         identification: [ { position: 2180 } ]}
+  PreReservationDays;
+  @EndUserText.label: 'Day Light Savings Applicable'@UI: {  lineItem:       [ { position: 2190 } ],         identification: [ { position: 2190 } ]}
+  DayLightSavingsApplicable;
+  @EndUserText.label: 'Kiosk Property'@UI: {  lineItem:       [ { position: 2200 } ],         identification: [ { position: 2200 } ]}
+  KioskProperty;
+  @EndUserText.label: 'Kiosk Active Date'@UI: {  lineItem:       [ { position: 2210 } ],         identification: [ { position: 2210 } ]}
+  KioskActiveDate;
+  @EndUserText.label: 'Buddy Property Number'@UI: {  lineItem:       [ { position: 2220 } ],         identification: [ { position: 2220 } ]}
+  BuddyPropertyNumber;
+  @EndUserText.label: 'Retail Store Square Footage'@UI: {  lineItem:       [ { position: 2230 } ],         identification: [ { position: 2230 } ]}
+  RetailStoreSquareFootage;
+  @EndUserText.label: 'Retail Storage Size'@UI: {  lineItem:       [ { position: 2240 } ],         identification: [ { position: 2240 } ]}
+  RetailStorageSize;
+  @EndUserText.label: 'Office Square Footage'@UI: {  lineItem:       [ { position: 2250 } ],         identification: [ { position: 2250 } ]}
+  OfficeSquareFootage;
+  @EndUserText.label: 'Historical Property'@UI: {  lineItem:       [ { position: 2260 } ],         identification: [ { position: 2260 } ]}
+  HistoricalProperty;
+  @EndUserText.label: 'Historical Owner'@UI: {  lineItem:       [ { position: 2270 } ],         identification: [ { position: 2270 } ]}
+  HistoricalOwner;
+  @EndUserText.label: 'PSA Property'@UI: {  lineItem:       [ { position: 2280 } ],         identification: [ { position: 2280 } ]}
+  PsaProperty;
+  @EndUserText.label: 'PSA Owner'@UI: {  lineItem:       [ { position: 2290 } ],         identification: [ { position: 2290 } ]}
+  PsaOwner;
+  @EndUserText.label: 'Transfer From'@UI: {  lineItem:       [ { position: 2300 } ],         identification: [ { position: 2300 } ]}
+  TransferFrom;
+  @EndUserText.label: 'GEO Code'@UI: {  lineItem:       [ { position: 2310 } ],         identification: [ { position: 2310 } ]}
+  GeoCode;
+  @EndUserText.label: 'Gate Access Zone 00'@UI: {  lineItem:       [ { position: 2320 } ],         identification: [ { position: 2320 } ]}
+  GateAccessZone00;
+  @EndUserText.label: 'Gate Access Zone 01'@UI: {  lineItem:       [ { position: 2330 } ],         identification: [ { position: 2330 } ]}
+  GateAccessZone01;
+  @EndUserText.label: 'Gate Access Zone 02'@UI: {  lineItem:       [ { position: 2340 } ],         identification: [ { position: 2340 } ]}
+  GateAccessZone02;
+  @EndUserText.label: 'Gate Access Zone 03'@UI: {  lineItem:       [ { position: 2350 } ],         identification: [ { position: 2350 } ]}
+  GateAccessZone03;
+  @EndUserText.label: 'Gate Access Zone 04'@UI: {  lineItem:       [ { position: 2360 } ],         identification: [ { position: 2360 } ]}
+  GateAccessZone04;
+  @EndUserText.label: 'Gate Access Zone 05'@UI: {  lineItem:       [ { position: 2370 } ],         identification: [ { position: 2370 } ]}
+  GateAccessZone05;
+  @EndUserText.label: 'Gate Access Zone 06'@UI: {  lineItem:       [ { position: 2380 } ],         identification: [ { position: 2380 } ]}
+  GateAccessZone06;
+  @EndUserText.label: 'Gate Access Zone 07'@UI: {  lineItem:       [ { position: 2390 } ],         identification: [ { position: 2390 } ]}
+  GateAccessZone07;
+  @EndUserText.label: 'Gate Access Zone 08'@UI: {  lineItem:       [ { position: 2400 } ],         identification: [ { position: 2400 } ]}
+  GateAccessZone08;
+  @EndUserText.label: 'Gate Access Zone 09'@UI: {  lineItem:       [ { position: 2410 } ],         identification: [ { position: 2410 } ]}
+  GateAccessZone09;
+  @EndUserText.label: 'Gate Access Zone 10'@UI: {  lineItem:       [ { position: 2420 } ],         identification: [ { position: 2420 } ]}
+  GateAccessZone10;
+  @EndUserText.label: 'Apartment Number 1'@UI: {  lineItem:       [ { position: 2430 } ],         identification: [ { position: 2430 } ]}
+  AppartmentNumber1;
+  @EndUserText.label: 'Apartment Name 1'@UI: {  lineItem:       [ { position: 2440 } ],         identification: [ { position: 2440 } ]}
+  AppartmentName1;
+  @EndUserText.label: 'Number of Stories 1'@UI: {  lineItem:       [ { position: 2450 } ],         identification: [ { position: 2450 } ]}
+  NumberOfStories1;
+  @EndUserText.label: 'Number of Bed Room 1'@UI: {  lineItem:       [ { position: 2460 } ],         identification: [ { position: 2460 } ]}
+  NumberOfBedRoom1;
+  @EndUserText.label: 'Number of Bath Room 1'@UI: {  lineItem:       [ { position: 2470 } ],         identification: [ { position: 2470 } ]}
+  NumberOfBathRoom1;
+  @EndUserText.label: 'Apartment Number 2'@UI: {  lineItem:       [ { position: 2480 } ],         identification: [ { position: 2480 } ]}
+  AppartmentNumber2;
+  @EndUserText.label: 'Apartment Name 2'@UI: {  lineItem:       [ { position: 2490 } ],         identification: [ { position: 2490 } ]}
+  AppartmentName2;
+  @EndUserText.label: 'Number of Stories 2'@UI: {  lineItem:       [ { position: 2500 } ],         identification: [ { position: 2500 } ]}
+  NumberOfStories2;
+  @EndUserText.label: 'Number of Bed Room 2'@UI: {  lineItem:       [ { position: 2510 } ],         identification: [ { position: 2510 } ]}
+  NumberOfBedRoom2;
+  @EndUserText.label: 'Number of Bath Room 2'@UI: {  lineItem:       [ { position: 2520 } ],         identification: [ { position: 2520 } ]}
+  NumberOfBathRoom2;
+  @EndUserText.label: 'Fees Type1'@UI: {  lineItem:       [ { position: 2530 } ],         identification: [ { position: 2530 } ]}
+  FeesType1;
+  @EndUserText.label: 'Amount1'@UI: {  lineItem:       [ { position: 2540 } ],         identification: [ { position: 2540 } ]}
+  Amount1;
+  @EndUserText.label: 'Fees Type2'@UI: {  lineItem:       [ { position: 2550 } ],         identification: [ { position: 2550 } ]}
+  FeesType2;
+  @EndUserText.label: 'Amount2'@UI: {  lineItem:       [ { position: 2560 } ],         identification: [ { position: 2560 } ]}
+  Amount2;
+  @EndUserText.label: 'Fees Type3'@UI: {  lineItem:       [ { position: 2570 } ],         identification: [ { position: 2570 } ]}
+  FeesType3;
+  @EndUserText.label: 'Amount3'@UI: {  lineItem:       [ { position: 2580 } ],         identification: [ { position: 2580 } ]}
+  Amount3;
+  @EndUserText.label: 'Fees Type 4'@UI: {  lineItem:       [ { position: 2590 } ],         identification: [ { position: 2590 } ]}
+  FeesType4;
+  @EndUserText.label: 'Amount4'@UI: {  lineItem:       [ { position: 2600 } ],         identification: [ { position: 2600 } ]}
+  Amount4;
+  @EndUserText.label: 'Fees Type 5'@UI: {  lineItem:       [ { position: 2610 } ],         identification: [ { position: 2610 } ]}
+  FeesType5;
+  @EndUserText.label: 'Amount5'@UI: {  lineItem:       [ { position: 2620 } ],         identification: [ { position: 2620 } ]}
+  Amount5;
+  @EndUserText.label: 'Fees Type 6'@UI: {  lineItem:       [ { position: 2630 } ],         identification: [ { position: 2630 } ]}
+  FeesType6;
+  @EndUserText.label: 'Amount6'@UI: {  lineItem:       [ { position: 2640 } ],         identification: [ { position: 2640 } ]}
+  Amount6;
+  @EndUserText.label: 'Fees Type 7'@UI: {  lineItem:       [ { position: 2650 } ],         identification: [ { position: 2650 } ]}
+  FeesType7;
+  @EndUserText.label: 'Amount7'@UI: {  lineItem:       [ { position: 2660 } ],         identification: [ { position: 2660 } ]}
+  Amount7;
+  @EndUserText.label: 'Fees Type 8'@UI: {  lineItem:       [ { position: 2670 } ],         identification: [ { position: 2670 } ]}
+  FeesType8;
+  @EndUserText.label: 'Amount8'@UI: {  lineItem:       [ { position: 2680 } ],         identification: [ { position: 2680 } ]}
+  Amount8;
+  @EndUserText.label: 'Fees Type 9'@UI: {  lineItem:       [ { position: 2690 } ],         identification: [ { position: 2690 } ]}
+  FeesType9;
+  @EndUserText.label: 'Amount9'@UI: {  lineItem:       [ { position: 2700 } ],         identification: [ { position: 2700 } ]}
+  Amount9;
+  @EndUserText.label: 'Fees Type 10'@UI: {  lineItem:       [ { position: 2710 } ],         identification: [ { position: 2710 } ]}
+  FeesType10;
+  @EndUserText.label: 'Amount10'@UI: {  lineItem:       [ { position: 2720 } ],         identification: [ { position: 2720 } ]}
+  Amount10;
+  @EndUserText.label: 'Risk Score'@UI: {  lineItem:       [ { position: 2730 } ],         identification: [ { position: 2730 } ]}
+  RiskScore;
+  @EndUserText.label: 'Risk Rating'@UI: {  lineItem:       [ { position: 2740 } ],         identification: [ { position: 2740 } ]}
+  RiskRating;
+  @EndUserText.label: 'CAS'@UI: {  lineItem:       [ { position: 2750 } ],         identification: [ { position: 2750 } ]}
+  Cas;
+  @EndUserText.label: 'Office Count'@UI: {  lineItem:       [ { position: 2760 } ],         identification: [ { position: 2760 } ]}
+  OfficeCount;
+  @EndUserText.label: 'Restroom Count'@UI: {  lineItem:       [ { position: 2770 } ],         identification: [ { position: 2770 } ]}
+  RestroomCount;
+  @EndUserText.label: 'Community Type'@UI: {  lineItem:       [ { position: 2780 } ],         identification: [ { position: 2780 } ]}
+  CommunityType;
+  @EndUserText.label: 'Kiosk Model'@UI: {  lineItem:       [ { position: 2790 } ],         identification: [ { position: 2790 } ]}
+  KioskModel;
+  @EndUserText.label: 'Kiosk Group'@UI: {  lineItem:       [ { position: 2800 } ],         identification: [ { position: 2800 } ]}
+  KioskGroup;
+  @EndUserText.label: 'Kiosk Date'@UI: {  lineItem:       [ { position: 2810 } ],         identification: [ { position: 2810 } ]}
+  KioskDate;
+  @EndUserText.label: 'Kiosk Buddy'@UI: {  lineItem:       [ { position: 2820 } ],         identification: [ { position: 2820 } ]}
+  KioskBuddy;
+  @EndUserText.label: 'CDD Model'@UI: {  lineItem:       [ { position: 2830 } ],         identification: [ { position: 2830 } ]}
+  CddModel;
+  @EndUserText.label: 'CDD Group'@UI: {  lineItem:       [ { position: 2840 } ],         identification: [ { position: 2840 } ]}
+  CddGroup;
+  @EndUserText.label: 'CDD Date'@UI: {  lineItem:       [ { position: 2850 } ],         identification: [ { position: 2850 } ]}
+  CddDate;
+  @EndUserText.label: 'ConnectCare Model'@UI: {  lineItem:       [ { position: 2860 } ],         identification: [ { position: 2860 } ]}
+  ConnectcareModel;
+  @EndUserText.label: 'ConnectCare Group'@UI: {  lineItem:       [ { position: 2870 } ],         identification: [ { position: 2870 } ]}
+  ConnectcareGroup;
+  @EndUserText.label: 'ConnectCare Date'@UI: {  lineItem:       [ { position: 2880 } ],         identification: [ { position: 2880 } ]}
+  ConnectcareDate;
+  @EndUserText.label: 'ConnectCare Buddy'@UI: {  lineItem:       [ { position: 2890 } ],         identification: [ { position: 2890 } ]}
+  ConnectcareBuddy;
+  @EndUserText.label: 'Satellite Model'@UI: {  lineItem:       [ { position: 2900 } ],         identification: [ { position: 2900 } ]}
+  SatelliteModel;
+  @EndUserText.label: 'SatelliteGroup'@UI: {  lineItem:       [ { position: 2910 } ],         identification: [ { position: 2910 } ]}
+  SatelliteGroup;
+  @EndUserText.label: 'Satellite Date'@UI: {  lineItem:       [ { position: 2920 } ],         identification: [ { position: 2920 } ]}
+  SatelliteDate;
+  @EndUserText.label: 'Satellite Hub'@UI: {  lineItem:       [ { position: 2930 } ],         identification: [ { position: 2930 } ]}
+  SatelliteHub;
+  @EndUserText.label: 'Traffic Monitoring'@UI: {  lineItem:       [ { position: 2940 } ],         identification: [ { position: 2940 } ]}
+  TrafficMonitoring;
+  @EndUserText.label: 'Major Acquisitions'@UI: {  lineItem:       [ { position: 2950 } ],         identification: [ { position: 2950 } ]}
+  MajorAcqisitions;
+  @EndUserText.label: 'Lifecycle Stage'@UI: {  lineItem:       [ { position: 2960 } ],         identification: [ { position: 2960 } ]}
+  LifecycleStage;
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,122 @@
+@Metadata.layer: #CORE
+annotate entity ZFI_TAN_PER_PROP with
+{
+
+  @UI.facet: [    {
+                label: 'General Information',
+                id: 'GeneralInfo',
+                type: #COLLECTION,
+                position: 10
+                },
+                     { id:            'Detail',
+                    purpose:       #STANDARD,
+                    type:          #IDENTIFICATION_REFERENCE,
+                    label:         'Invoice Details',
+                    parentId: 'GeneralInfo',
+                    position:      10 } ]
+  @UI: {  lineItem:       [ { position: 10 } ],
+        identification: [ { position: 10 } ] }
+  @EndUserText.label: 'Ledger'
+  rldnr;
+  @UI: {  lineItem:       [ { position: 20 } ],
+     identification: [ { position: 20 } ],
+     selectionField: [ { position: 05 } ] }
+  @EndUserText.label: 'Company Code'
+  rbukrs;
+
+  @UI: {
+  lineItem:       [ { position: 30 } ],
+     identification: [ { position: 30 } ],
+     selectionField: [ { position: 10 } ] }
+  anlkl;
+  @UI: {  lineItem:       [ { position: 40 } ],
+     identification: [ { position: 40 } ] }
+  @EndUserText.label: 'Asset #'
+  anln1;
+  @UI: {  lineItem:       [ { position: 50 } ],
+     identification: [ { position: 50 } ] }
+  @EndUserText.label: 'Asset Value Date'
+  bzdat;
+  @UI: {  lineItem:       [ { position: 60 } ],
+     identification: [ { position: 60 } ] }
+  @EndUserText.label: 'Asset Tran. Type'
+  anbwa;
+  @UI: {  lineItem:       [ { position: 70 } ],
+     identification: [ { position: 70 } ] }
+  @EndUserText.label: 'Asset Tran. Type Description'
+  bwatxt;
+  @UI: {  lineItem:       [ { position: 80 } ],
+     identification: [ { position: 80 } ] }
+  @EndUserText.label: 'Document Number'
+  belnr;
+  @UI: {  lineItem:       [ { position: 90 } ],
+     identification: [ { position: 90 } ] }
+  @EndUserText.label: 'Document Type'
+  blart;
+  @UI: {  lineItem:       [ { position: 100 } ],
+     identification: [ { position: 100 } ] }
+  @EndUserText.label: 'GL Account Number' // Fix for issue - SAP-1617
+  racct;
+  @UI: {  lineItem:       [ { position: 110 } ],
+     identification: [ { position: 110 } ] }
+  @EndUserText.label: 'Profit Center'
+  prctr;
+  @UI: {  lineItem:       [ { position: 120 } ],
+     identification: [ { position: 120 } ] }
+  @EndUserText.label: 'Bus. Trans. Category'
+  bttype;
+  @UI: {  lineItem:       [ { position: 130 } ],
+     identification: [ { position: 130 } ] }
+  @EndUserText.label: 'Bus. Trans. Category Description'
+  BusTranCatDesc;
+  @UI: {  lineItem:       [ { position: 140 } ],
+     identification: [ { position: 140 } ] }
+  @EndUserText.label: 'Bus. Trans. Type'
+  cbttype;
+  @UI: {  lineItem:       [ { position: 150 } ],
+     identification: [ { position: 150 } ] }
+  @EndUserText.label: 'Bus. Trans. Type Description'
+  BusTranTypDesc;
+  @UI: {  lineItem:       [ { position: 160 } ],
+     identification: [ { position: 160 } ] }
+  @EndUserText.label: 'Reference Doc.'
+  awref;
+  @UI: {  lineItem:       [ { position: 170 } ],
+     identification: [ { position: 170 } ] }
+  @EndUserText.label: 'Company code currency'
+  rhcur;
+  @UI: {  lineItem:       [ { position: 180 } ],
+     identification: [ { position: 180 } ] }
+  @EndUserText.label: 'Amt. in Co. Code currency'
+  hsl;
+  @UI: {  lineItem:       [ { position: 190 } ],
+     identification: [ { position: 190 } ] }
+  @EndUserText.label: 'Debit/Credit'
+  drcrk;
+  @UI: {  lineItem:       [ { position: 200 } ],
+     identification: [ { position: 200 } ] }
+  @EndUserText.label: 'Posting Date'
+  budat;
+  @UI: {  lineItem:       [ { position: 210 } ],
+     identification: [ { position: 210 } ] }
+  @EndUserText.label: 'Posting Key'
+  bschl;
+  @UI: {  lineItem:       [ { position: 220 } ],
+     identification: [ { position: 220 } ] }
+  @EndUserText.label: 'Assignment'
+  zuonr;
+  @UI: {  lineItem:       [ { position: 230 } ],
+     identification: [ { position: 230 } ] }
+  @EndUserText.label: 'Text'
+  sgtxt;
+  @UI: {  lineItem:       [ { position: 240 } ],
+     identification: [ { position: 240 } ] }
+  @EndUserText.label: 'Supplier'
+  lifnr;
+  @UI: {
+//  lineItem:       [ { position: 30 } ],
+     identification: [ { position: 25 } ],
+     selectionField: [ { position: 20 } ] }
+  gjahr;
+
+}

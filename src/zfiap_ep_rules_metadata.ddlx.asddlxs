@@ -1,0 +1,69 @@
+@Metadata.layer: #CORE
+annotate view ZFIAP_EP_RULES_ENTITY
+ with 
+{
+   @UI.facet: [ { id:              'State', 
+                 purpose:         #STANDARD,
+                 type:            #IDENTIFICATION_REFERENCE,
+                 label:           'Detail',
+                 position:        10 } ]
+  @UI: {  lineItem:       [ { position: 10 } ],
+         identification: [ { position: 10 } ],
+         selectionField: [ { position: 10 } ] }
+State ;
+
+@UI: {  lineItem:       [ { position: 20 } ],
+         identification: [ { position: 20 } ],
+         selectionField: [ { position: 20 } ] }  
+         Escheat_Rule;
+
+ @UI: {  lineItem:       [ { position: 30 } ],
+         identification: [ { position: 30 } ],
+         selectionField: [ { position: 30 } ] }
+Remit_Type;
+
+ @UI: {  lineItem:       [ { position: 40 } ],
+         identification: [ { position: 40 } ]} 
+Holding_Period;
+
+ @UI: {  lineItem:       [ { position: 50 } ],
+         identification: [ { position: 50 } ],
+         selectionField: [ { position: 40 } ] 
+         } 
+hp_uom;
+
+ @UI: {  lineItem:       [ { position: 60 } ] ,
+         identification: [ { position: 60 } ] } 
+PI_Delay;
+
+ @UI: {  lineItem:       [ { position: 70 } ] ,
+         identification: [ { position: 70 } ] } 
+Prop_Type_Code;
+
+ @UI: {  lineItem:       [ { position: 80 } ] ,
+         identification: [ { position: 80 } ] } 
+Created_By;
+
+ @UI: {  lineItem:       [ { position: 90 } ] ,
+         identification: [ { position: 90 } ] 
+          } 
+Created_On;
+
+ @UI: {  lineItem:       [ { position: 100 } ] ,
+         identification: [ { position: 100 } ] } 
+Created_At;
+
+ @UI: {  lineItem:       [ { position: 110 } ] ,
+         identification: [ { position: 110 } ] } 
+Changed_By;
+
+ @UI: {  lineItem:       [ { position: 120 } ] ,
+         identification: [ { position: 120 } ] } 
+Changed_On;
+
+ @UI: {  lineItem:       [ { position: 130 } ] ,
+         identification: [ { position: 130 } ] } 
+         
+changed_at;
+  
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for ZFIAP_EP_DATA'
+define service ZFIAP_EP_DATA_SD {
+  expose ZFIAP_EP_DATA2;
+}
